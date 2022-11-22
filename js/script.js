@@ -8,7 +8,7 @@ const userAge = document.getElementById('userAge');
 const pricePerKm = 0.2762;
 
 // Assegno html button a una variabile
-const button = document.getElementById('buyButton');
+const button = document.getElementById('getToTicketButton');
 
 // add event listener sul click al button
 button.addEventListener('click', function() {
