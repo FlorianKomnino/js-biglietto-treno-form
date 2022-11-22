@@ -12,8 +12,6 @@ const button = document.getElementById('buyButton');
 
 // add event listener sulla variabile del button
 button.addEventListener('click', function() {
-    console.log(userAge.value);
-    console.log(tripLength.value);
+    console.log(`Il prezzo senza sconti è ${parseInt(tripLength.value) * pricePerKm}`);
 
-    console.log(parseInt(tripLength.value) * pricePerKm);
 })
