@@ -12,6 +12,12 @@ const button = document.getElementById('buyButton');
 
 // add event listener sulla variabile del button
 button.addEventListener('click', function() {
-    console.log(`Il prezzo senza sconti è ${parseInt(tripLength.value) * pricePerKm}`);
-
-})
+    let tripPrice = parseInt(tripLength.value) * pricePerKm;
+    console.log(`Il prezzo senza sconti è: ${tripPrice.toFixed(2)}`);
+    if (parseInt(userAge.value) < 18) {
+        tripPrice = tripPrice - (tripPrice / 100 * 17.5);
+    } else if (parseInt(userAge.value) >= 65) {
+        tripPrice = tripPrice - (tripPrice / 100 * 33.3);
+    }
+    console.log(`Il prezzo finale è: ${tripPrice.toFixed(2)}`);
+});
